@@ -3,38 +3,48 @@
     "name": "Chicken Hop",
     "platform": "iOS",
     "language": "Objective C",
-    "links": {"site": "http://mssodhi.me", "github": "https://github.com/mssodhi/soundbox"}
+    "links": {"site": "", "github": "https://github.com/mssodhi/Chicken-Hop"},
+    "images": [ "assets/img/projects/chicken_hop1.png", "assets/img/projects/chicken_hop2.png", "assets/img/projects/chicken_hop3.png"],
+    "description": ""
   },
   {
     "name": "SoundBox",
     "platform": "WebApp",
     "language": "Java and AngularJs",
-    "links": {"site": "http://mssodhi.me", "github": "https://github.com/mssodhi/soundbox"},
-    "images": [ "assets/img/projects/soundbox1.png", "assets/img/projects/soundbox2.png", "assets/img/projects/soundbox3.png"]
+    "links": {"site": "http://mssodhi.me/soundbox", "github": "https://github.com/mssodhi/soundbox"},
+    "images": [ "assets/img/projects/soundbox1.png", "assets/img/projects/soundbox2.png", "assets/img/projects/soundbox3.png"],
+    "description": ""
   },
   {
     "name": "Jarvis",
     "platform": "iOS",
     "language": "Swift 3",
-    "links": {"site": "http://mssodhi.me", "github": ""}
+    "links": {"site": "", "github": "https://github.com/mssodhi/Jarvis-ios"},
+    "images": [""],
+    "description": ""
   },
   {
     "name": "Wake me up",
     "platform": "iOS",
     "language": "Swift 2",
-    "links": {"site": "http://mssodhi.me", "github": ""}
+    "links": {"site": "", "github": "https://github.com/mssodhi/Wake-Me-Up"},
+    "images": [""],
+    "description": ""
   },
   {
     "name": "WebCraft",
     "platform": "iOS and WebApp",
     "language": "Swift, Java, and AngularJs",
-    "links": {"site": "http://mssodhi.me", "github": ""}
+    "links": {"site": "http://a-out.me/webcraft/#/about", "github": ""},
+    "images": [""],
+    "description": ""
   },
   {
-    "name": "Speech to Text",
+    "name": "Text to Speech",
     "platform": "iOS",
     "language": "Swift 2",
-    "links": {"site": "http://mssodhi.me", "github": ""}
-
+    "links": {"site": "", "github": "https://github.com/mssodhi/text2speech"},
+    "images": [""],
+    "description": ""
   }
 ]
