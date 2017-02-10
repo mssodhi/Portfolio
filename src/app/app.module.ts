@@ -14,11 +14,12 @@ import { ProjectComponent } from './project-component/project.component';
 import { ProfileService, ChartsService } from './shared/services';
 import { PROJECTS_REDUCER, Effects } from './shared/reducers';
 import { EducationComponent } from './education/education.component';
-import { PersonalComponent } from './personal/personal.component'
+import { PersonalComponent } from './personal/personal.component';
+import { ResumeComponent } from './resume/resume.component'
 
 @NgModule({
   declarations: [
-    AppComponent, HomeComponent, ProjectComponent, EducationComponent, PersonalComponent
+    AppComponent, HomeComponent, ProjectComponent, EducationComponent, PersonalComponent, ResumeComponent
   ],
   imports: [
     APP_ROUTER_PROVIDERS,

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { EducationComponent } from './education/education.component';
 import { PersonalComponent } from './personal/personal.component';
+import { ResumeComponent } from "./resume/resume.component";
 
 export const routes: Routes = [
   {
@@ -26,6 +27,12 @@ export const routes: Routes = [
   {
     path: 'personal',
     component: PersonalComponent,
+    canActivate: [],
+    resolve: {}
+  },
+  {
+    path: 'resume',
+    component: ResumeComponent,
     canActivate: [],
     resolve: {}
   }

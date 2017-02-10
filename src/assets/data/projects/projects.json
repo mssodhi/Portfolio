@@ -20,7 +20,7 @@
     "platform": "iOS",
     "language": "Swift 3",
     "links": {"site": "", "github": "https://github.com/mssodhi/Jarvis-ios"},
-    "images": [""],
+    "images": [],
     "description": ""
   },
   {
@@ -28,7 +28,7 @@
     "platform": "iOS",
     "language": "Swift 2",
     "links": {"site": "", "github": "https://github.com/mssodhi/Wake-Me-Up"},
-    "images": [""],
+    "images": [],
     "description": ""
   },
   {
@@ -36,7 +36,7 @@
     "platform": "iOS and WebApp",
     "language": "Swift, Java, and AngularJs",
     "links": {"site": "http://a-out.me/webcraft/#/about", "github": ""},
-    "images": [""],
+    "images": [],
     "description": ""
   },
   {
@@ -44,7 +44,7 @@
     "platform": "iOS",
     "language": "Swift 2",
     "links": {"site": "", "github": "https://github.com/mssodhi/text2speech"},
-    "images": [""],
+    "images": [],
     "description": ""
   }
 ]
