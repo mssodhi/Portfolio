@@ -2,9 +2,9 @@
   <md-card-header>
     <!--<div md-card-avatar class="example-header-image"></div>-->
     <md-card-title>{{project.name}}</md-card-title>
-    <md-card-subtitle>{{project.platform}}</md-card-subtitle>
+    <md-card-subtitle>{{project.platform}} <small>({{project.language}})</small></md-card-subtitle>
   </md-card-header>
-  <img md-card-image *ngIf="project.image" [src]="project.image">
+  <img *ngFor="let image of project.images" md-card-image [src]="image" (click)="onViewImage(image)">
   <md-card-content>
     <p>
       The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.

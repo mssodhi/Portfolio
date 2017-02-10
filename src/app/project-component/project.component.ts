@@ -5,12 +5,11 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: 'project.component.html',
   styleUrls: ['project.component.scss']
 })
-export class ProjectComponent implements OnInit {
+export class ProjectComponent {
 
   @Input() project: any;
 
-  ngOnInit() {
-
-    console.log('in project-component component!', this.project);
+  onViewImage(image) {
+    console.log("open some component to show image", image);
   }
 }

@@ -10,7 +10,7 @@
     "platform": "WebApp",
     "language": "Java and AngularJs",
     "links": {"site": "http://mssodhi.me", "github": "https://github.com/mssodhi/soundbox"},
-    "image": "assets/img/mainPic.jpg"
+    "images": [ "assets/img/projects/soundbox1.png", "assets/img/projects/soundbox2.png", "assets/img/projects/soundbox3.png"]
   },
   {
     "name": "Jarvis",
