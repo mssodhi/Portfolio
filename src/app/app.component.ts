@@ -9,9 +9,9 @@ export class AppComponent implements OnInit {
 
   sideMenuItems = [
     {title: 'Projects', link: ''},
-    {title: 'Education', link: ''},
-    {title: 'Personal', link: ''},
-    {title: 'Resume', link: ''}
+    {title: 'Education', link: '/education'},
+    {title: 'Personal', link: '/personal'},
+    {title: 'Resume', link: '/resume'}
   ];
 
   ngOnInit() {

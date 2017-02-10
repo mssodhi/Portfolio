@@ -12,11 +12,13 @@ import { APP_ROUTER_PROVIDERS } from './app.routes';
 import { HomeComponent } from './home/home.component';
 import { ProjectComponent } from './project-component/project.component';
 import { ProfileService, ChartsService } from './shared/services';
-import { PROJECTS_REDUCER, Effects } from './shared/reducers'
+import { PROJECTS_REDUCER, Effects } from './shared/reducers';
+import { EducationComponent } from './education/education.component';
+import { PersonalComponent } from './personal/personal.component'
 
 @NgModule({
   declarations: [
-    AppComponent, HomeComponent, ProjectComponent
+    AppComponent, HomeComponent, ProjectComponent, EducationComponent, PersonalComponent
   ],
   imports: [
     APP_ROUTER_PROVIDERS,
