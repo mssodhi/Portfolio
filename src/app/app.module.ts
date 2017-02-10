@@ -12,7 +12,7 @@ import { APP_ROUTER_PROVIDERS } from './app.routes';
 import { HomeComponent } from './home/home.component';
 import { ProjectComponent } from './project-component/project.component';
 import { ProfileService, ChartsService } from './shared/services';
-import { PROFILE_REDUCER, Effects } from './shared/reducers'
+import { PROJECTS_REDUCER, Effects } from './shared/reducers'
 
 @NgModule({
   declarations: [
@@ -26,7 +26,7 @@ import { PROFILE_REDUCER, Effects } from './shared/reducers'
     HttpModule,
     MaterialModule.forRoot(),
     RouterModule,
-    StoreModule.provideStore({ PROFILE_REDUCER })
+    StoreModule.provideStore({ PROJECTS_REDUCER })
   ],
   providers: [ProfileService, ChartsService],
   bootstrap: [AppComponent]

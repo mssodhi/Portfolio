@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
+import {ACTION} from '../shared/constants/actions-constants';
+import {STATUS} from '../shared/constants/status-constants';
 
 @Component({
   selector: 'home',
@@ -10,23 +12,18 @@ import { Observable } from 'rxjs';
 })
 export class HomeComponent implements OnInit {
 
-  profile$: Observable<any>;
   projects: any[] = [];
   selectedProject: any = null;
 
   constructor(private activatedRoute: ActivatedRoute, private router: Router, private store: Store<any>) {
-    this.profile$ = this.store.select('PROFILE_REDUCER');
+    this.store.dispatch({ type: ACTION.LOAD_PROJECTS });
   }
 
   ngOnInit() {
-    this.projects.push(
-      { name: 'Chicken Hop' },
-      { name: 'SoundBox' },
-      { name: 'Jarvis' },
-      { name: 'Wake me up' },
-      { name: 'WebCraft' },
-      { name: 'Speech to text' }
-    );
+    this.store.select<any>('PROJECTS_REDUCER')
+      .filter(state => state.status == STATUS.COMPLETED)
+      .first()
+      .subscribe(state => this.projects = state.projects);
   }
 
   onProjectClick(project) {

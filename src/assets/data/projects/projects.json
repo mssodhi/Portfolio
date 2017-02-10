@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Chicken Hop",
+    "platform": "iOS",
+    "language": "Objective C",
+    "link": ""
+  },
+  {
+    "name": "SoundBox",
+    "platform": "WebApp",
+    "language": "Java and AngularJs",
+    "link": "http://mssodhi.me"
+  },
+  {
+    "name": "Jarvis",
+    "platform": "iOS",
+    "language": "Swift 3",
+    "link": ""
+  },
+  {
+    "name": "Wake me up",
+    "platform": "iOS",
+    "language": "Swift 2",
+    "link": ""
+  },
+  {
+    "name": "WebCraft",
+    "platform": "iOS and WebApp",
+    "language": "Swift, Java, and AngularJs",
+    "link": ""
+  },
+  {
+    "name": "Speech to Text",
+    "platform": "iOS",
+    "language": "Swift 2",
+    "link": ""
+  }
+]

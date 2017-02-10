@@ -1,2 +1,2 @@
-export * from './profile-reducer';
+export * from './projects-reducer';
 export * from './effects';
