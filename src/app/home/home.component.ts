@@ -13,7 +13,7 @@ import {STATUS} from '../shared/constants/status-constants';
 export class HomeComponent implements OnInit {
 
   projects: any[] = [];
-  selectedProject: any = null;
+  selectedProject: any;
 
   constructor(private activatedRoute: ActivatedRoute, private router: Router, private store: Store<any>) {
     this.store.dispatch({ type: ACTION.LOAD_PROJECTS });
@@ -24,11 +24,6 @@ export class HomeComponent implements OnInit {
       .filter(state => state.status == STATUS.COMPLETED)
       .first()
       .subscribe(state => this.projects = state.projects);
-  }
-
-  onProjectClick(project) {
-    console.log(project);
-    this.selectedProject = project;
   }
 
 }

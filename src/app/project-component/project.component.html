@@ -1,6 +1,20 @@
 <md-card>
-  <md-card-title>{{project.name}}</md-card-title>
+  <md-card-header>
+    <!--<div md-card-avatar class="example-header-image"></div>-->
+    <md-card-title>{{project.name}}</md-card-title>
+    <md-card-subtitle>{{project.platform}}</md-card-subtitle>
+  </md-card-header>
+  <img md-card-image *ngIf="project.image" [src]="project.image">
   <md-card-content>
-    <span>hello world!</span>
+    <p>
+      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting.
+    </p>
   </md-card-content>
+
+  <md-card-actions>
+    <a md-button *ngIf="project.links.github" [href]="project.links.github" target="_blank">Github</a>
+    <a md-button *ngIf="project.links.site" [href]="project.links.site" target="_blank">{{project.name}}</a>
+  </md-card-actions>
 </md-card>

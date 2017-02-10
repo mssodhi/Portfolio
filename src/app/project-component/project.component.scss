@@ -1,0 +1,14 @@
+md-card {
+  width: 600px;
+  display: inline-block;
+
+  md-card-title, md-card-subtitle {
+    margin-left: -8px;
+  }
+
+  img {
+    width: 150px;
+    margin: 0 0 10px 0;
+  }
+
+}

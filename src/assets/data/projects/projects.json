@@ -3,36 +3,38 @@
     "name": "Chicken Hop",
     "platform": "iOS",
     "language": "Objective C",
-    "link": ""
+    "links": {"site": "http://mssodhi.me", "github": "https://github.com/mssodhi/soundbox"}
   },
   {
     "name": "SoundBox",
     "platform": "WebApp",
     "language": "Java and AngularJs",
-    "link": "http://mssodhi.me"
+    "links": {"site": "http://mssodhi.me", "github": "https://github.com/mssodhi/soundbox"},
+    "image": "assets/img/mainPic.jpg"
   },
   {
     "name": "Jarvis",
     "platform": "iOS",
     "language": "Swift 3",
-    "link": ""
+    "links": {"site": "http://mssodhi.me", "github": ""}
   },
   {
     "name": "Wake me up",
     "platform": "iOS",
     "language": "Swift 2",
-    "link": ""
+    "links": {"site": "http://mssodhi.me", "github": ""}
   },
   {
     "name": "WebCraft",
     "platform": "iOS and WebApp",
     "language": "Swift, Java, and AngularJs",
-    "link": ""
+    "links": {"site": "http://mssodhi.me", "github": ""}
   },
   {
     "name": "Speech to Text",
     "platform": "iOS",
     "language": "Swift 2",
-    "link": ""
+    "links": {"site": "http://mssodhi.me", "github": ""}
+
   }
 ]

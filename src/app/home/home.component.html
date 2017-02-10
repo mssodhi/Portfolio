@@ -2,10 +2,10 @@
 
   <div class="projects-list">
     <h3 md-subheader="">Projects</h3>
-    <button md-raised-button *ngFor="let project of projects" (click)="onProjectClick(project)">{{project.name}}</button>
+    <button md-raised-button *ngFor="let project of projects" (click)="selectedProject = project">{{project.name}}</button>
   </div>
 
-  <div class="project" *ngIf="selectedProject" flex>
+  <div class="project" *ngIf="selectedProject">
     <project-component [project]="selectedProject"></project-component>
   </div>
 </div>
