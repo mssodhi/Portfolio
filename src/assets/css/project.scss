@@ -1,0 +1,24 @@
+//@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
+
+@import '~@angular/material/core/theming/all-theme';
+
+
+// Include non-theme styles for core.
+@include md-core();
+
+// Define a theme.
+$primary: md-palette($md-light-blue, 400, 700, 200);
+$accent:  md-palette($md-blue, A200, A100, A400);
+
+$theme: md-light-theme($primary, $accent);
+
+// Include all theme styles for the components.
+@include angular-material-theme($theme);
+
+
+html, body, .app-component {
+  margin:0;
+  padding:0;
+  height:100%;
+}
+

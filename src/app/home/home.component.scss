@@ -1,0 +1,36 @@
+.home-page {
+
+  -webkit-column-count: 3; /* Chrome, Safari, Opera */
+  -moz-column-count: 3; /* Firefox */
+  column-count: 3;
+
+  .projects-list {
+    width: 90%;
+    -webkit-column-count: 1; /* Chrome, Safari, Opera */
+    -moz-column-count: 1; /* Firefox */
+    column-count: 1;
+    display: inline-block;
+
+    h3 {
+      font-size: 1.6em;
+      font-weight: 500;
+      padding-left: 5px;
+
+    }
+
+    button {
+      font-size: 1.5em;
+      font-stretch: semi-expanded;
+      font-weight: 100;
+      width: 100%;
+      padding: 10px;
+      margin: 5px;
+    }
+  }
+
+  .project {
+    width: 135%;
+    margin: 5px;
+    padding-top: 85px;
+  }
+}

@@ -1,0 +1,79 @@
+md-toolbar {
+  color: #ffffff;
+  height: 150px;
+  padding-left: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-weight: lighter;
+  font-stretch: semi-condensed;
+
+  .title {
+    font-size: 45px;
+    font-variant: small-caps;
+    padding-top: 80px;
+    padding-left: 280px;
+  }
+}
+
+md-sidenav-container {
+
+  height: calc(100vh - 150px);
+
+  md-sidenav {
+    width: 260px;
+
+    .content {
+
+      img {
+        padding: 5px;
+        height: 95%;
+        width: 95%;
+        border-radius: 75%;
+      }
+
+      .personal {
+
+
+
+        h3 {
+          font-family: fantasy;
+          font-size: 2em;
+          font-weight: 100;
+          margin: 5px;
+        }
+
+        a {
+          font-size: .8em;
+          font-weight: 100;
+        }
+
+      }
+
+      .sidenav-list {
+
+        div {
+          padding: 5px;
+
+          button {
+            width: 100%;
+            height: 40px;
+
+            font-size: 1.3em;
+            font-weight: 100;
+          }
+        }
+      }
+    }
+
+  }
+
+  .router {
+    padding-left: 20px;
+  }
+
+}
+
+.example-fill-remaining-space {
+  // This fills the remaining space, by using flexbox.
+  // Every toolbar row uses a flexbox row layout.
+  flex: 1 1 auto;
+}

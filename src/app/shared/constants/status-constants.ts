@@ -1,0 +1,6 @@
+export const STATUS = {
+  INVALID: 'INVALID',
+  IN_PROGRESS: 'IN_PROGRESS',
+  COMPLETED: 'COMPLETED',
+  ERROR: 'ERROR',
+};

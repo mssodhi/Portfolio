@@ -1,0 +1,29 @@
+<div class="app-component">
+  <md-toolbar color="primary">
+    <span class="title">Personal Site</span>
+  </md-toolbar>
+
+  <md-sidenav-container class="sidenav-container">
+    <md-sidenav #start [opened]="true" mode="side">
+      <div class="content">
+        <img src="../assets/img/coloringbook.jpg">
+        <hr>
+        <div align="center" class="personal">
+          <h3 align="center" class="md-card-header-text">Manu Sodhi</h3>
+          <a href="mailto:mssodhi@ucdavis.edu">mssodhi@ucdavis.edu</a>
+        </div>
+        <hr>
+        <div class="sidenav-list">
+          <div *ngFor="let obj of sideMenuItems">
+            <button md-button>{{obj.title}}</button>
+          </div>
+        </div>
+      </div>
+    </md-sidenav>
+
+    <div class="router">
+      <router-outlet></router-outlet>
+    </div>
+
+  </md-sidenav-container>
+</div>
