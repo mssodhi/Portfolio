@@ -4,7 +4,7 @@
     "platform": "iOS",
     "language": "Objective C",
     "links": {"site": "", "github": "https://github.com/mssodhi/Chicken-Hop"},
-    "images": [ "assets/img/projects/chicken_hop1.png", "assets/img/projects/chicken_hop2.png", "assets/img/projects/chicken_hop3.png"],
+    "images": [ "https://s3-us-west-2.amazonaws.com/mssodhi-portfolio/images/chicken_hop1.png", "https://s3-us-west-2.amazonaws.com/mssodhi-portfolio/images/chicken_hop2.png", "https://s3-us-west-2.amazonaws.com/mssodhi-portfolio/images/chicken_hop3.png"],
     "description": ""
   },
   {
@@ -12,7 +12,7 @@
     "platform": "WebApp",
     "language": "Java and AngularJs",
     "links": {"site": "http://mssodhi.me/soundbox", "github": "https://github.com/mssodhi/soundbox"},
-    "images": [ "assets/img/projects/soundbox1.png", "assets/img/projects/soundbox2.png", "assets/img/projects/soundbox3.png"],
+    "images": [ "https://s3-us-west-2.amazonaws.com/mssodhi-portfolio/images/soundbox1.png", "https://s3-us-west-2.amazonaws.com/mssodhi-portfolio/images/soundbox2.png", "https://s3-us-west-2.amazonaws.com/mssodhi-portfolio/images/soundbox3.png"],
     "description": ""
   },
   {

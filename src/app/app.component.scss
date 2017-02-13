@@ -12,6 +12,18 @@ md-toolbar {
     padding-top: 80px;
     padding-left: 280px;
   }
+
+  .links {
+    font-size: 35px;
+    padding-top: 80px;
+    padding-right: 125px;
+
+    a {
+      color: black;
+      padding-right: 15px;
+    }
+
+  }
 }
 
 md-sidenav-container {

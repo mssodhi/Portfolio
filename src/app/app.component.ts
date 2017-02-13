@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ACTION } from './shared';
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-root',
@@ -14,8 +16,11 @@ export class AppComponent implements OnInit {
     {title: 'Resume', link: '/resume'}
   ];
 
-  ngOnInit() {
+  constructor(private store: Store<any>) {
+  }
 
+  ngOnInit() {
+    this.store.dispatch({ type: ACTION.LOAD_PROJECTS });
   }
 
 }

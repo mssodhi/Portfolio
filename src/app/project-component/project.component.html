@@ -1,10 +1,12 @@
-<md-card>
+<md-card *ngIf="project">
   <md-card-header>
     <!--<div md-card-avatar class="example-header-image"></div>-->
     <md-card-title>{{project.name}}</md-card-title>
     <md-card-subtitle>{{project.platform}} <small>({{project.language}})</small></md-card-subtitle>
   </md-card-header>
-  <img *ngFor="let image of project.images" md-card-image [src]="image" (click)="onViewImage(image)">
+  <a *ngFor="let image of project.images" [href]="image" target="_blank">
+    <img md-card-image [src]="image" (click)="onViewImage(image)">
+  </a>
   <md-card-content>
     <p>{{project.description}}</p>
   </md-card-content>

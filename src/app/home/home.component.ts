@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
-import {ACTION} from '../shared/constants/actions-constants';
-import {STATUS} from '../shared/constants/status-constants';
+
+import { ACTION, STATUS } from '../shared';
 
 @Component({
   selector: 'home',
@@ -13,10 +11,8 @@ import {STATUS} from '../shared/constants/status-constants';
 export class HomeComponent implements OnInit {
 
   projects: any[] = [];
-  selectedProject: any;
 
-  constructor(private activatedRoute: ActivatedRoute, private router: Router, private store: Store<any>) {
-    this.store.dispatch({ type: ACTION.LOAD_PROJECTS });
+  constructor(private store: Store<any>) {
   }
 
   ngOnInit() {
@@ -24,6 +20,10 @@ export class HomeComponent implements OnInit {
       .filter(state => state.status == STATUS.COMPLETED)
       .first()
       .subscribe(state => this.projects = state.projects);
+  }
+
+  onProjectSelect(project) {
+    this.store.dispatch({ type: ACTION.SELECT_PROJECT, payload: project });
   }
 
 }
