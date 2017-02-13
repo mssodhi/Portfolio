@@ -35,8 +35,8 @@
     "name": "WebCraft",
     "platform": "iOS and WebApp",
     "language": "Swift, Java, and AngularJs",
-    "links": {"site": "http://a-out.me/webcraft/#/about", "github": ""},
-    "images": [],
+    "links": {"site": "http://a-out.me/webcraft/#/", "github": ""},
+    "images": ["https://s3-us-west-2.amazonaws.com/mssodhi-portfolio/images/webcraft1.png", "https://s3-us-west-2.amazonaws.com/mssodhi-portfolio/images/webcraft2.png", "https://s3-us-west-2.amazonaws.com/mssodhi-portfolio/images/webcraft3.png"],
     "description": ""
   },
   {
@@ -44,7 +44,7 @@
     "platform": "iOS",
     "language": "Swift 2",
     "links": {"site": "", "github": "https://github.com/mssodhi/text2speech"},
-    "images": [],
+    "images": ["https://s3-us-west-2.amazonaws.com/mssodhi-portfolio/images/text2speech1.png", "https://s3-us-west-2.amazonaws.com/mssodhi-portfolio/images/text2speech2.png"],
     "description": ""
   }
 ]

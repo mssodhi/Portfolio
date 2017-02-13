@@ -5,7 +5,7 @@
     <md-card-subtitle>{{project.platform}} <small>({{project.language}})</small></md-card-subtitle>
   </md-card-header>
   <a *ngFor="let image of project.images" [href]="image" target="_blank">
-    <img md-card-image [src]="image" (click)="onViewImage(image)">
+    <img md-card-image [src]="image">
   </a>
   <md-card-content>
     <p>{{project.description}}</p>

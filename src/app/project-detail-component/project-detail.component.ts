@@ -1,14 +1,14 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 
 import { STATUS } from '../shared';
 
 @Component({
-  selector: 'project-component',
-  templateUrl: 'project.component.html',
-  styleUrls: ['project.component.scss']
+  selector: 'project-detail-component',
+  templateUrl: 'project-detail.component.html',
+  styleUrls: ['project-detail.component.scss']
 })
-export class ProjectComponent {
+export class ProjectDetailComponent {
 
   project: any;
 
@@ -18,7 +18,4 @@ export class ProjectComponent {
       .subscribe(state => this.project = state.selectedProject);
   }
 
-  onViewImage(image) {
-    console.log("open some component to show image", image);
-  }
 }

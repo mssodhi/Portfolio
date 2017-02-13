@@ -5,10 +5,10 @@ import { ACTION, STATUS } from '../shared';
 
 @Component({
   selector: 'home',
-  templateUrl: './home.component.html',
-  styleUrls: ['home.component.scss']
+  templateUrl: 'projects.component.html',
+  styleUrls: ['projects.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class ProjectsComponent implements OnInit {
 
   projects: any[] = [];
 

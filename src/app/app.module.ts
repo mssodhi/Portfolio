@@ -9,17 +9,16 @@ import { StoreModule } from '@ngrx/store';
 import 'hammerjs';
 import { AppComponent } from './app.component';
 import { APP_ROUTER_PROVIDERS } from './app.routes';
-import { HomeComponent } from './home/home.component';
-import { ProjectComponent } from './project-component/project.component';
-import { ProfileService, ChartsService } from './shared/services';
-import { PROJECTS_REDUCER, Effects } from './shared/reducers';
+import { ProjectsComponent } from './projects/projects.component';
+import { ProjectDetailComponent } from './project-detail-component/project-detail.component';
 import { EducationComponent } from './education/education.component';
 import { PersonalComponent } from './personal/personal.component';
 import { ResumeComponent } from './resume/resume.component'
+import { ProfileService, ChartsService, PROJECTS_REDUCER, Effects } from './shared';
 
 @NgModule({
   declarations: [
-    AppComponent, HomeComponent, ProjectComponent, EducationComponent, PersonalComponent, ResumeComponent
+    AppComponent, ProjectsComponent, ProjectDetailComponent, EducationComponent, PersonalComponent, ResumeComponent
   ],
   imports: [
     APP_ROUTER_PROVIDERS,
