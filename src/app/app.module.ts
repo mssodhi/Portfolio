@@ -14,7 +14,7 @@ import { ProjectDetailComponent } from './project-detail-component/project-detai
 import { EducationComponent } from './education/education.component';
 import { PersonalComponent } from './personal/personal.component';
 import { ResumeComponent } from './resume/resume.component'
-import { ProfileService, ChartsService, PROJECTS_REDUCER, Effects } from './shared';
+import { ProfileService, ChartsService, COURSES_REDUCER, PROJECTS_REDUCER, Effects } from './shared';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,7 @@ import { ProfileService, ChartsService, PROJECTS_REDUCER, Effects } from './shar
     HttpModule,
     MaterialModule.forRoot(),
     RouterModule,
-    StoreModule.provideStore({ PROJECTS_REDUCER })
+    StoreModule.provideStore({ PROJECTS_REDUCER, COURSES_REDUCER })
   ],
   providers: [ProfileService, ChartsService],
   bootstrap: [AppComponent]

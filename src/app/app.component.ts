@@ -21,6 +21,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.store.dispatch({ type: ACTION.LOAD_PROJECTS });
+    this.store.dispatch({ type: ACTION.LOAD_COURSES });
   }
 
 }

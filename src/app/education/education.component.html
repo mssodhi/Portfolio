@@ -1,3 +1,18 @@
-<p>
-  education works!
-</p>
+<md-card class="education-card">
+  <md-card-header>
+    <md-card-title>Education</md-card-title>
+  </md-card-header>
+  <md-card-content>
+    <div class="overview">
+      <span class="pull-right">UC Davis (2012 - 2107)</span>
+      <p>Computer Science B.S.</p>
+      <p>Managerial Economics B.A.</p>
+    </div>
+
+    <div class="courses">
+      <div *ngFor="let course of courses">
+        <span>{{course.name}}</span>
+      </div>
+    </div>
+  </md-card-content>
+</md-card>

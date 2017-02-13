@@ -1,0 +1,26 @@
+md-card {
+
+  width: 95%;
+
+  md-card-title {
+    font-family: Roboto, 'Helvetica Neue', sans-serif;
+    font-size: 2em;
+    font-weight: 100;
+    margin-left: -8px;
+  }
+
+  md-card-content {
+    .overview {
+      width: 60%;
+      font-size: 1.5em;
+      font-weight: 100;
+    }
+
+    .courses {
+      span {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+}

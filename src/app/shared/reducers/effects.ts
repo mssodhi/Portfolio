@@ -9,12 +9,20 @@ import { ACTION } from '../constants';
 
 @Injectable()
 export class Effects {
-  // profile
+  // projects
   @Effect() loadProjects$ = this.actions$
     .ofType(ACTION.LOAD_PROJECTS)
     .switchMap(() =>
-      this.http.get('assets/data/projects/projects.json')
+      this.http.get('assets/data/projects.json')
         .map(res => ({ type: ACTION.LOAD_PROJECTS_COMPLETED, payload: res.json() }))
+    );
+
+  // courses
+  @Effect() loadCourses$ = this.actions$
+    .ofType(ACTION.LOAD_PROJECTS)
+    .switchMap(() =>
+      this.http.get('assets/data/courses.json')
+        .map(res => ({ type: ACTION.LOAD_COURSES_COMPLETED, payload: res.json() }))
     );
 
   constructor (
