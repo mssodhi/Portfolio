@@ -1,17 +1,20 @@
-import { Http } from '@angular/http';
 import { Injectable } from '@angular/core';
-import 'rxjs/Rx';
-
-import { environment } from '../../../environments/environment';
+import { Apollo } from 'apollo-angular';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class GraphService {
 
-  constructor(private http: Http) { }
+  constructor(private apollo: Apollo) {
+  }
 
-  queryGraph() {
-    return this.http
-      .get(`${environment.server}/graph`)
-      .map(res => res.json());
+  queryGraph(query: any) {
+    return Observable.create(observer => {
+      this.apollo.watchQuery({query: query})
+        .subscribe(({data}) => {
+          observer.next(data);
+          observer.complete();
+        });
+    });
   }
 }

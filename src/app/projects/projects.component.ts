@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
+import gql from 'graphql-tag';
 
 import { ACTION, STATUS } from '../shared';
 
@@ -16,10 +17,36 @@ export class ProjectsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.store.select<any>('PROJECTS_REDUCER')
+
+    // ************************************** GraphQL **************************************
+    const Projects = gql`
+      query Profile {
+        projects {
+          name
+          platform
+          language
+          links {
+            site
+            github
+          }
+          images
+        }
+      }
+    `;
+
+    this.store.dispatch({ type: ACTION.LOAD_GRAPH, payload: Projects });
+
+    this.store.select<any>('GRAPH_REDUCER')
       .filter(state => state.status == STATUS.COMPLETED)
       .first()
-      .subscribe(state => this.projects = state.projects);
+      .subscribe(state => this.projects = state.data.projects);
+    // ************************************** GraphQL **************************************
+
+
+    // this.store.select<any>('PROJECTS_REDUCER')
+    //   .filter(state => state.status == STATUS.COMPLETED)
+    //   .first()
+    //   .subscribe(state => this.projects = state.projects);
   }
 
   onProjectSelect(project) {

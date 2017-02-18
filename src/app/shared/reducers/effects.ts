@@ -3,7 +3,7 @@ import { Actions, Effect } from '@ngrx/effects';
 import 'rxjs/add/operator/switchMap'
 
 import { ACTION } from '../../shared';
-import { DataService } from '../services'
+import { DataService, GraphService } from '../services'
 
 @Injectable()
 export class Effects {
@@ -22,6 +22,13 @@ export class Effects {
         .map(res => ({ type: ACTION.LOAD_COURSES_COMPLETED, payload: res }))
     );
 
-  constructor (private actions$: Actions, private dataService: DataService) { }
+  @Effect() loadGraph$ = this.actions$
+    .ofType(ACTION.LOAD_GRAPH)
+    .switchMap(action =>
+      this.graphService.queryGraph(action.payload)
+        .map(res => ({ type: ACTION.LOAD_GRAPH_COMPLETED, payload: res }))
+    );
+
+  constructor (private actions$: Actions, private dataService: DataService, private graphService: GraphService) { }
 
 }
