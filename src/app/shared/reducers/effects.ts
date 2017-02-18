@@ -5,7 +5,7 @@ import { Store } from '@ngrx/store';
 import 'rxjs/add/operator/switchMap'
 
 import { ACTION } from '../constants';
-
+import { environment } from '../../../environments/environment';
 
 @Injectable()
 export class Effects {
@@ -13,7 +13,7 @@ export class Effects {
   @Effect() loadProjects$ = this.actions$
     .ofType(ACTION.LOAD_PROJECTS)
     .switchMap(() =>
-      this.http.get('assets/data/projects.json')
+      this.http.get(`${environment.server}/portfolio/projects`)
         .map(res => ({ type: ACTION.LOAD_PROJECTS_COMPLETED, payload: res.json() }))
     );
 
@@ -21,7 +21,7 @@ export class Effects {
   @Effect() loadCourses$ = this.actions$
     .ofType(ACTION.LOAD_PROJECTS)
     .switchMap(() =>
-      this.http.get('assets/data/courses.json')
+      this.http.get(`${environment.server}/portfolio/courses`)
         .map(res => ({ type: ACTION.LOAD_COURSES_COMPLETED, payload: res.json() }))
     );
 
