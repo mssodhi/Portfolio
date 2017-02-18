@@ -25,10 +25,7 @@ export class ProjectsComponent implements OnInit {
           name
           platform
           language
-          links {
-            site
-            github
-          }
+          links
           images
         }
       }
