@@ -1,2 +1,2 @@
-export * from './profile-service';
-export * from './charts-service';
+export * from './data.service';
+export * from './graph.service';
