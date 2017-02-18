@@ -20,7 +20,7 @@
         <hr>
         <div class="sidenav-list">
           <div *ngFor="let obj of sideMenuItems">
-            <a [routerLink]="obj.link" md-button>{{obj.title}}</a>
+            <a (click)="navigateTo(obj.link)" md-button>{{obj.title}}</a>
           </div>
         </div>
       </div>
