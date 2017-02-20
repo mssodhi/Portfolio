@@ -1,4 +1,7 @@
-# Sodhi Portfolio @ TBD
+# Sodhi Portfolio @ mssodhi.me
+
+## Site to show case a few select projects I'm currently worked on or have in the past.
+
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.25.5.
 
