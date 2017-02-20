@@ -16,12 +16,13 @@ import { ProjectDetailComponent } from './project-detail-component/project-detai
 import { EducationComponent } from './education/education.component';
 import { PersonalComponent } from './personal/personal.component';
 import { ResumeComponent } from './resume/resume.component'
+import { environment } from '../environments/environment';
 import { DataService, GraphService, COURSES_REDUCER, GRAPH_REDUCER, PROJECTS_REDUCER, Effects } from './shared';
 
 
 const client = new ApolloClient({
   networkInterface: createNetworkInterface({
-    uri: 'http://localhost:3000/graph'
+    uri: `${environment.server}/graph`
   }),
 });
 
