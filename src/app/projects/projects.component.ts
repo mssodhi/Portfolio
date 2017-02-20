@@ -27,6 +27,7 @@ export class ProjectsComponent implements OnInit {
           language
           links
           images
+          description
         }
       }
     `;
