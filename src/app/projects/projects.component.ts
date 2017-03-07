@@ -37,7 +37,10 @@ export class ProjectsComponent implements OnInit {
     this.store.select<any>('GRAPH_REDUCER')
       .filter(state => state.status == STATUS.COMPLETED)
       .first()
-      .subscribe(state => this.projects = state.data.projects);
+      .subscribe(state => {
+        this.projects = state.data.projects;
+        this.onProjectSelect(this.projects[1]);
+      });
     // ************************************** GraphQL **************************************
 
 
