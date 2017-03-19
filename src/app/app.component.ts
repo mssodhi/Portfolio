@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { Store } from '@ngrx/store';
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
+import {Store} from '@ngrx/store';
+import gql from 'graphql-tag';
 
-import { ACTION } from './shared';
+import {ACTION, STATUS} from './shared';
 
 @Component({
   selector: 'app-root',
@@ -22,12 +23,34 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.store.dispatch({ type: ACTION.LOAD_PROJECTS });
-    this.store.dispatch({ type: ACTION.LOAD_COURSES });
+    // this.store.dispatch({type: ACTION.LOAD_PROJECTS});
+    this.store.dispatch({type: ACTION.LOAD_COURSES});
+
+    // ************************************** GraphQL **************************************
+    const Projects = gql`
+      query Profile {
+        projects {
+          name
+          platform
+          language
+          links
+          images
+          description
+        }
+      }
+    `;
+
+    this.store.dispatch({type: ACTION.LOAD_GRAPH, payload: Projects});
+
+    this.store.select<any>('GRAPH_REDUCER')
+      .filter(state => state.status == STATUS.COMPLETED)
+      .first()
+      .subscribe(state => this.store.dispatch({type: ACTION.SELECT_PROJECT, payload: state.data.projects[2]}));
+    // ************************************** GraphQL **************************************
   }
 
   navigateTo(link) {
-    this.router.navigateByUrl(link, { skipLocationChange: true });
+    this.router.navigateByUrl(link, {skipLocationChange: true});
   }
 
 }
